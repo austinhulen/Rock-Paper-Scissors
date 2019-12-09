@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Rock Paper Scissors</title>
+</head>
+
+<body>
+    <script>
+        function computerPlay(){
+            let selection = Math.floor(Math.random() * 3); 
+            switch (selection){
+                case 0: 
+                    return "Rock";
+                    break;
+                case 1: 
+                    return "Paper";
+                    break;
+                case 2: 
+                    return "Scissors";
+                    break;
+                default: 
+                    return "Error";
+                    break;
+            }
+        }
+    
+    </script>
+</body>
+
+</html>
