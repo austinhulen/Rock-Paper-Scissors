@@ -29,29 +29,29 @@
             switch (playerAnswer) {
                 case "rock":
                     if (computerSelection == "Scissors"){
-                        return "You Won! Rock beats Scissors.";
+                        return 1;
                     } else if (computerSelection == "Paper"){
-                        return "You Lose. Paper beats Rock";
+                        return -1;
                     }else{
-                        return "Tie. You both chose Rock";
+                        return 0;
                     }
                     break;
                 case "paper":
                     if (computerSelection == "Rock"){
-                            return "You Won! Paper beats Rock.";
+                            return 1;
                         } else if (computerSelection == "Scissors"){
-                            return "You Lose. Scissors beats Paper.";
+                            return -1;
                         }else{
-                            return "Tie. You both chose Paper.";
+                            return 0;
                         }
                     break;
                 case "scissors":
                     if (computerSelection == "Paper"){
-                            return "You Won! Scissors beats Paper.";
+                            return 1;
                         } else if (computerSelection == "Rock"){
-                            return "You Lose. Rock beats Scissors";
+                            return -1;
                         }else{
-                            return "Tie. You both choose Scissors.";
+                            return 0;
                         }
                     break;
                 default:
@@ -63,7 +63,7 @@
             let palyerScore = 0;
             let playerScore = 0;
 
-            
+
         }
     
     </script>
