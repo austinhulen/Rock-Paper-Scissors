@@ -59,10 +59,18 @@
                     break;
             }
         }
+        function gameWinner(playerScore, computerScore){
+            if(playerScore > computerScore){
+                return "Congrats you win! \n Scoreboard \n You: " + playerScore + "\n Computer: " + computerScore;
+            } else if (playerScore < computerScore){
+                return "You Lose. \n Scoreboard \n You: " + playerScore + "\n Computer: " + computerScore;
+            }else{
+                return "Tie. \n Scoreboard \n You: " + playerScore + "\n Computer: " + computerScore;
+            }
+        }
         function game(){
             let palyerScore = 0;
             let computerScore = 0;
-            let tieScore = 0;
             for(let i = 1; i < 5; i++){
                 let playerChoice = prompt("Pick Rock, Paper, or Scissors", " ");
                 let computerChoice = computerPlay();
@@ -75,9 +83,9 @@
                    computerScore++;
                 }else{
                     console.log("Tie. You both chose " + playerChoice);
-                   tieScore++;
                 }
             }
+            gameWinner(playerScore, computerScore)
         }
     
     </script>
