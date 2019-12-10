@@ -24,6 +24,41 @@
                     break;
             }
         }
+        function playRound(playerSelection, computerSelection) {
+            let playerAnswer = playerSelection.toLowerCase();
+            switch (playerAnswer) {
+                case rock:
+                    if (computerSelection == "Scissors"){
+                        return "You Won! Rock beats Scissors.";
+                    } else if (computerSelection == "Paper"){
+                        return "You Lose. Paper beats Rock";
+                    }else{
+                        return "Tie. You both chose Rock";
+                    }
+                    break;
+                case paper:
+                    if (computerSelection == "Rock"){
+                            return "You Won! Paper beats Rock.";
+                        } else if (computerSelection == "Scissors"){
+                            return "You Lose. Scissors beats Paper.";
+                        }else{
+                            return "Tie. You both chose Paper.";
+                        }
+                    break;
+                case scissors:
+                    if (computerSelection == "Paper"){
+                            return "You Won! Scissors beats Paper.";
+                        } else if (computerSelection == "Rock"){
+                            return "You Lose. Rock beats Scissors";
+                        }else{
+                            return "Tie. You both choose Scissors.";
+                        }
+                    break;
+                default:
+                    return "Error, you did not choose Rock, Paper, or Scissors.";
+                    break;
+            }
+        }
     
     </script>
 </body>
