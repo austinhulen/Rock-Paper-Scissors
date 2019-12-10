@@ -27,7 +27,7 @@
         function playRound(playerSelection, computerSelection) {
             let playerAnswer = playerSelection.toLowerCase();
             switch (playerAnswer) {
-                case rock:
+                case "rock":
                     if (computerSelection == "Scissors"){
                         return "You Won! Rock beats Scissors.";
                     } else if (computerSelection == "Paper"){
@@ -36,7 +36,7 @@
                         return "Tie. You both chose Rock";
                     }
                     break;
-                case paper:
+                case "paper":
                     if (computerSelection == "Rock"){
                             return "You Won! Paper beats Rock.";
                         } else if (computerSelection == "Scissors"){
@@ -45,7 +45,7 @@
                             return "Tie. You both chose Paper.";
                         }
                     break;
-                case scissors:
+                case "scissors":
                     if (computerSelection == "Paper"){
                             return "You Won! Scissors beats Paper.";
                         } else if (computerSelection == "Rock"){
@@ -58,6 +58,12 @@
                     return "Error, you did not choose Rock, Paper, or Scissors.";
                     break;
             }
+        }
+        function game(){
+            let palyerScore = 0;
+            let playerScore = 0;
+
+            
         }
     
     </script>
