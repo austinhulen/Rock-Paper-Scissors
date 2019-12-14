@@ -81,7 +81,11 @@ function game(playerChoice){
     console.log(gameWinner(playerScore, computerScore));
 }
 
-let btn = document.querySelector('#rock');
-btn.addEventListener('click', () => {
-  alert("Hello World");
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+    button.addEventListener('click', (e) => {
+        game(`${e.srcElement.innerHTML}`);
+
+    });
+
 });
