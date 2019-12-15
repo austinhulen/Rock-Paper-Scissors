@@ -65,7 +65,7 @@ function gameWinner(playerScore, computerScore){
 function game(playerChoice){
     let playerScore = 0;
     let computerScore = 0;
-    for(let i = 0; i < 1; i++){
+    for(let i = 0; i < 5; i++){
         let computerChoice = computerPlay();
         let outcome = playRound(playerChoice, computerChoice);
         if (outcome == 1){
@@ -89,3 +89,16 @@ buttons.forEach((button) => {
     });
 
 });
+
+const container = document.querySelector('#container');
+
+const scoreboard = document.createElement('div');
+
+scoreboard.classList.add('scoreboard');
+const score = document.createElement('h2');
+const players = document.createElement('p');
+players.textContent = "Player: Computer: ";
+score.textContent ="Score";
+scoreboard.appendChild(score);
+scoreboard.appendChild(players);
+container.appendChild(scoreboard);
