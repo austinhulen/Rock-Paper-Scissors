@@ -111,7 +111,7 @@ const players = document.createElement('p');
 const out = document.createElement('p');
 players.innerText = "Player: " + playerScore + "\nComputer: " + computerScore;
 score.innerText = "Score";
-out.innerText = "Pick Rock Paper or Scissors. First to get 5 points win."
+out.innerText = "Pick Rock, Paper, or Scissors. First to get 5 points win."
 scoreboard.appendChild(score);
 scoreboard.appendChild(players);
 scoreboard.appendChild(out);
