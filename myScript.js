@@ -1,3 +1,5 @@
+let playerScore = 0;
+let computerScore = 0;
 function computerPlay(){
     let selection = Math.floor(Math.random() * 3); 
     switch (selection){
@@ -63,28 +65,37 @@ function gameWinner(playerScore, computerScore){
 }
 
 function game(playerChoice){
-    let playerScore = 0;
-    let computerScore = 0;
-    for(let i = 0; i < 5; i++){
         let computerChoice = computerPlay();
         let outcome = playRound(playerChoice, computerChoice);
+        out.innerText = "You chose " + playerChoice + ". The computer chose " + computerChoice + ".";
         if (outcome == 1){
-            console.log("You win!" + playerChoice + " beats " + computerChoice);
             playerScore++;
         }else if (outcome == -1){
-            console.log("You lose." + computerChoice + " beats " + playerChoice);
            computerScore++;
         }else{
-            console.log("Tie. You both chose " + playerChoice);
+            out.innerText = "Tie. You both chose " + playerChoice;
         }
-    }
-    console.log(gameWinner(playerScore, computerScore));
+        players.innerText = "Player: " + playerScore + "\nComputer: " + computerScore;
+        if (playerScore === 5){
+            out.innerText = "Congrats you won the Game!";
+        } else if (computerScore === 5){
+            out.innerText = "Game Over. You lost.";
+        }else return;
+
+}
+
+function newGame(){
+    computerScore = 0;
+    playerScore = 0;
+
 }
 
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
     button.addEventListener('click', (e) => {
-        game(`${e.srcElement.innerHTML}`);
+        if(playerScore !== 5 && computerScore !== 5){
+            game(`${e.srcElement.innerHTML}`);
+        }
 
     });
 
@@ -97,8 +108,10 @@ const scoreboard = document.createElement('div');
 scoreboard.classList.add('scoreboard');
 const score = document.createElement('h2');
 const players = document.createElement('p');
-players.textContent = "Player: Computer: ";
-score.textContent ="Score";
+const out = document.createElement('p');
+players.innerText = "Player: " + playerScore + "\nComputer: " + computerScore;
+score.innerText ="Score";
 scoreboard.appendChild(score);
 scoreboard.appendChild(players);
+scoreboard.appendChild(out);
 container.appendChild(scoreboard);
