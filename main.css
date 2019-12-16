@@ -57,3 +57,10 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
 }
+.hidden {
+    display: none;
+}
+
+.show {
+    display: inline;
+}

@@ -78,8 +78,10 @@ function game(playerChoice){
         players.innerText = "Player: " + playerScore + "\nComputer: " + computerScore;
         if (playerScore === 5){
             out.innerText = "Congrats you won the Game!";
+            document.getElementById("newGame").className = 'show';
         } else if (computerScore === 5){
             out.innerText = "Game Over. You lost.";
+            document.getElementById("newGame").className = 'show';
         }else return;
 
 }
@@ -94,7 +96,7 @@ const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
     button.addEventListener('click', (e) => {
         if(playerScore !== 5 && computerScore !== 5){
-            game(`${e.srcElement.innerHTML}`);
+            game(`${e.srcElement.id}`);
         }
 
     });
