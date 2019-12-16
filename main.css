@@ -14,15 +14,15 @@ button {
     text-align: center;
     text-decoration: none;
     outline: none;
-    color: #fff;
-    background-color: rgb(65, 64, 64);
+    color: black;
+    background-color: white;
     border: none;
     border-radius: 15px;
 }
-.button:hover {background-color: rgb(163, 163, 163)}
+.button:hover {background-color: whitesmoke}
 
 .button:active {
-  background-color: rgb(163, 163, 163);
+  background-color: whitesmoke;
   transform: translateY(4px);
 }
 p {
@@ -32,8 +32,8 @@ h2 {
     font-size: 45px;
 }
 body {
-    color: white;
-    background-color: black;
+    color: black;
+    background-color: white;
     background-size: cover;
 }
 #rock {
@@ -63,4 +63,18 @@ body {
 
 .show {
     display: inline;
+}
+#newGame {
+    margin-top: 50px;
+    background-color: black;
+    color: white;
+    font-size: 40px;
+}
+.over {
+    font-weight: bold;
+    transition: all 3s ease;
+    
+}
+.grow {
+    transform: scale(1.6);
 }

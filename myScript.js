@@ -78,9 +78,13 @@ function game(playerChoice){
         players.innerText = "Player: " + playerScore + "\nComputer: " + computerScore;
         if (playerScore === 5){
             out.innerText = "Congrats you won the Game!";
+            out.classList.add('over');
+            out.classList.add('grow');
             document.getElementById("newGame").className = 'show';
         } else if (computerScore === 5){
             out.innerText = "Game Over. You lost.";
+            out.classList.add('over');
+            out.classList.add('grow');
             document.getElementById("newGame").className = 'show';
         }else return;
 
