@@ -71,10 +71,7 @@ body {
     font-size: 40px;
 }
 .over {
-    font-weight: bold;
-    transition: all 3s ease;
+    transition: all 3s;
+    transform: scale(1.2);
     
-}
-.grow {
-    transform: scale(1.6);
 }
