@@ -67,13 +67,14 @@ function gameWinner(playerScore, computerScore){
 function game(playerChoice){
         let computerChoice = computerPlay();
         let outcome = playRound(playerChoice, computerChoice);
-        out.innerText = "You chose " + playerChoice + ". The computer chose " + computerChoice + ".";
         if (outcome == 1){
+            out.innerHTML = "You <b>beat</b> the computer!";
             playerScore++;
         }else if (outcome == -1){
+            out.innerHTML = "You <b>lost</b> to the Computer.";
            computerScore++;
         }else{
-            out.innerText = "Tie. You both chose " + playerChoice;
+            out.innerHTML = "<b>Tie</b>. You both chose " + playerChoice;
         }
         players.innerText = "Player: " + playerScore + "\nComputer: " + computerScore;
         if (playerScore === 5){
