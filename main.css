@@ -22,7 +22,7 @@ button {
 .button:hover {background-color: rgb(163, 163, 163)}
 
 .button:active {
-  background-color: #rgb(163, 163, 163);
+  background-color: rgb(163, 163, 163);
   transform: translateY(4px);
 }
 p {
@@ -35,4 +35,25 @@ body {
     color: white;
     background-color: black;
     background-size: cover;
+}
+#rock {
+    height: 200px;
+    width: 200px;
+    background-image: url("images/rock.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#paper {
+    height: 200px;
+    width: 200px;
+    background-image: url("images/paper.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#scissors {
+    height: 200px;
+    width: 200px;
+    background-image: url("images/scissors.png");
+    background-repeat: no-repeat;
+    background-size: contain;
 }
